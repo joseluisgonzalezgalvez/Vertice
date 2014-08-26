@@ -1,0 +1,62 @@
+<!--DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Vértice - Independiente</title>
+    <!--link rel="stylesheet" type="text/css" href="easyui.css">
+	<link rel="stylesheet" type="text/css" href="icon.css">
+	<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="jquery.easyui.min.js"></script-->
+    <script type="text/javascript" src="validar_forma.js"></script>
+    <link rel='stylesheet' type='text/css' href='css/style.css' />
+  </head>
+  <body>
+    <div id="page-wrap" >
+
+    <textarea id="header"></textarea>
+    <div id="logo">
+      <img id="image" src="logo.jpg" alt="logo" />
+    </div>
+
+    <form method="post" action="muestra.php" >
+      <input  id="boton2" type="submit" value="Mostrar lo último enviado" name="mostrar" /> 
+    </form><br>
+
+     
+    <form name="formulario" action="especial_do.php"  method="post" enctype="multipart/form-data">
+      <select id="prioridad" name="etiqueta" >
+	<option value="-1" selected="selected" >Elige la prioridad</option>
+	<option value="URGENTE">URGENTE</option>
+	<option value="CANCELADO">CANCELAR LA PROGRAMACIÓN</option>
+	<!--option value="DETENER">DETENER LA REPRODUCCIÓN</option-->
+      </select>
+      <input type="file" name="archivo[]" multiple="true" /></br></br>      
+      <input type="date" name="bday" >
+      <input type="time" name="bhour"><b> <--- Inicia</b></br>
+      <input type="date" name="eday" >
+      <input type="time" name="ehour"><b> <--- Termina</b></br></br>
+
+
+      <div style="height:450px;width:520px;border:5px solid #346;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="lista-players">
+	<center><b>Players GNP</b></center>
+	<input type="checkbox" onclick="marcar(this);" /><b>Seleccionar todos</b></br></br>
+	<!--input type="checkbox" name="ips[]" value="192.168.100.18" >Player local GNP (192.168.100.18)</br-->
+
+      </div>      
+      <input id="boton3" type="button" onclick="validate()" value="Enviar"> 
+      <!--input name="action" type="hidden" value="upload" /-->
+    </form></br>
+    
+  </body>
+</html>
+
+
+<!--html upload>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  <input name="archivo" type="file" size="35" />
+  <input name="enviar" type="submit" value="Upload File" />
+  <input name="action" type="hidden" value="upload" />     
+</form>
+</html upload-->
+
+

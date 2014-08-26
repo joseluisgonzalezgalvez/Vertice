@@ -1,0 +1,142 @@
+<!--DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Vértice, Contenido Especial</title>
+    <!--link rel="stylesheet" type="text/css" href="easyui.css">
+	<link rel="stylesheet" type="text/css" href="icon.css">
+	<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="jquery.easyui.min.js"></script-->
+    <script type="text/javascript" src="validar_forma.js"></script>
+    <link rel='stylesheet' type='text/css' href='../css/style.css' />
+  </head>
+  <body>
+    
+    <div id="page-wrap" >
+      <!--textarea id="header">NUEVA CONFIGURACIÓN ESPECIAL</textarea-->
+      <div id="login">
+	<br>
+	RED DE PLAYERS &nbsp | &nbsp USUARIO &nbsp &nbsp
+      </div>
+      <img id="image" src="cabecera.jpg" alt="logo" />
+      
+      <div id="botones">
+	<form method="post" action="" name="form_muestra" >
+	  <a href="../pantallas/pantallas.html"><img src="boton_pantallas_b.png" name="bot_pan" width="196" height="50" id="boton01"/></a>
+	  <a href="../medios/medios.html"><img src="boton_medios_b.png" name="bot_med" width="196" height="50" id="boton02"/></a>
+	  <a href="../plantillas/plantillas.html"><img src="boton_plantillas_r.png" name="bot_pla" width="196" height="50" id="boton03"/></a>
+	  <a href="../programacion/programacion.html"><img src="boton_programacion_b.png" name="bot_pro" width="196" height="50" id="boton04"/></a>
+	  <a href="../consulta/consulta.html"><img src="boton_consulta_b.png" name="bot_con" width="196" height="50" id="boton05"/></a>
+	  <!--
+	  <input type="submit" src="logo.jpg" id="boton2" value="Mis pantallas" name="red" onClick="enviar('../pantallas/pantallas.html')" />
+	  <input type="submit" id="boton2" value="Mis medios" name="plantillas" onClick="enviar('../medios/medios.html')" />
+	  <input type="submit" id="boton2" value="Mis plantillas" name="medios" onClick="enviar('../plantillas/plantillas.html')" />
+	  <input type="submit" id="boton2" value="Programación" name="programacion" onClick="enviar('../programacion/programacion.html')" />
+	  <input type="submit" id="boton2" value="Consulta" name="programacion" onClick="enviar('../consulta/consulta.html')" />
+	  -->
+	</form>
+      </div>
+
+      <div id="seleccion_plantilla">
+	<img id="image" src="flecha_abajo.jpg" height="40" width="40" alt="select" />
+      </div>
+      
+      <div id="workspace">
+	<div id="dataspace">
+	  <div id="textarea"><br>
+	  Crear nueva plantilla <br><br>
+	  </div>
+	  <br>
+	  <img id="image_0" onclick='imagen2()' src="bot_fullscreen.jpg" height="60" width="80" alt="select">
+	  <img id="image_1" onclick='imagen1()' src="bot_screen2.jpg" height="60" width="80" alt="select" />
+	  <img id="image_2" onclick='imagen0()' src="bot_screen3.jpg" height="60" width="80" alt="select" />
+	  <br>
+	  <br>
+	  <div id="textarea"></br>
+	    PLANTILLAS CONSTRUIDAS (2)</br></br>
+	  </div>
+	  <br>
+	  <br>	  
+	  <img id="image_3" src="bot_screen2.jpg" height="120" width="160" alt="select" />
+	  <br>
+	  <img id="image_4" src="bot_screen3.jpg" onclick='imagen()' height="120" width="160" alt="select" />
+	  <br>
+	  <br>
+	  <input type='button' onclick='imagen()' value='Enviar'/>
+
+	  <!-- hr size="5" -->
+
+	  <div id="textarea"></br>
+	    MEDIOS DISPONIBLES (1) </br></br>
+	  </div>
+	  <input id="boton" type="button" value="Fade Lento">
+	  <!--input id="boton1" type="button" value="Fade Normal"-->
+	  <br>
+	  <img id="boton1" src="keith_richards_face.jpg" height="150" width="150" alt="select" />
+	  <img id="target" src="keith_richards_face.jpg" height="150" width="150" alt="select" />
+	</div>
+	<div id="titulocargando"><br>
+	  <div id="textarea">DEFINICIÓN DE LA PLANTILLA</div>
+	</div>
+	<div id="imagencargando"></div></br>
+	<div id="pantalla1"></div>
+      </div>      
+      <!--form method="post" action="bring.php" -->
+      <!--textarea id="header">CONSULTAR CONFIGURACIÓN POR PLAYER:</textarea-->
+      <!--input id="boton3" type="submit" value="Consultar" name="bring" /-->
+      <!--/form-->            
+    </div>
+  </body>
+  
+
+<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+  function imagen0(){
+  imagen = '<br><br><img src="pantalladiv_4.png" onclick="imagen5()" alt="cargando..." height="180" width="240"  />'
+  formulario = '</br> &nbsp Nombre: <input type="text" name="categoria"></br></br><div id="textarea2"></br>&nbsp &nbsp SECCIÓN 1 <select><option value="imagen">IMAGEN</option><option value="video">VIDEO</option></select></div></br><div id="textarea1"></br>&nbsp &nbsp SECCIÓN 2 <select><option value="imagen">IMAGEN</option><option value="video">VIDEO</option></select></div></br><div id="textarea4"></br>&nbsp &nbsp SECCIÓN 3 <select><option value="imagen">IMAGEN</option><option value="video">VIDEO</option></select></div></br><div id="textarea3"></br>&nbsp &nbsp SECCIÓN 4 <select><option value="imagen">IMAGEN</option><option value="video">VIDEO</option></select></div>'
+  document.getElementById('pantalla1').innerHTML = formulario;
+  document.getElementById('imagencargando').innerHTML = imagen;
+  }  
+  function imagen1(){
+  imagen = '<img src="../bot_screen2.jpg" alt="cargando..." height="180" width="240"  />'
+  document.getElementById('imagencargando').innerHTML = imagen;
+  }  
+  function imagen2(){
+  imagen = '<img src="../bot_fullscreen.jpg" alt="cargando..." height="180" width="240"  />'
+  document.getElementById('imagencargando').innerHTML = imagen;
+  }  
+  function imagen5(){
+  imagen = '<br><br>Tipo de medios:<input type="checkbox" name="ipsC[]" value="150.23.101.37" >Video <input type="checkbox" name="ipsC[]" value="150.23.101.38" >Imagen</br>'
+  document.getElementById('pantalla1').innerHTML = imagen;
+  }  
+  function enviar(pagina){
+  document.form_muestra.action = pagina;
+  document.form_muestra.submit();
+}
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+  $("#boton").click(function () {
+  $('#target').toggle("slow");
+  });
+  $("#boton1").click(function () {
+  $('#target').toggle("fast");
+  });
+  $("#boton2").click(function () {
+  $('#target').toggle(5000);
+  });
+  });
+</script>
+
+</html>
+
+<!--html upload>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  <input name="archivo" type="file" size="35" />
+  <input name="enviar" type="submit" value="Upload File" />
+  <input name="action" type="hidden" value="upload" />     
+</form>
+</html upload-->

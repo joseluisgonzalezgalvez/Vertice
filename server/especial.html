@@ -1,0 +1,55 @@
+<!--DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Vértice, Contenido Especial</title>
+    <!--link rel="stylesheet" type="text/css" href="easyui.css">
+	<link rel="stylesheet" type="text/css" href="icon.css">
+	<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="jquery.easyui.min.js"></script-->
+    <script type="text/javascript" src="validar_forma.js"></script>
+    <link rel='stylesheet' type='text/css' href='css/style.css' />
+  </head>
+  <body>
+    
+    <div id="page-wrap" >
+      <!--textarea id="header">NUEVA CONFIGURACIÓN ESPECIAL</textarea-->
+      <div id="login">
+	<br>
+	RED DE PLAYERS &nbsp | &nbsp USUARIO &nbsp &nbsp
+      </div>
+      <img id="image" src="cabecera.jpg" alt="logo" />
+      <div id="botones">
+	<form method="post" action="muestra.php" >
+	  <input  id="boton2" type="submit" value="Mis pantallas" name="red" />     
+	  <input  id="boton2" type="submit" value="Mis Plantillas" name="plantillas" />     
+	  <input  id="boton2" type="submit" value="Mis Medios" name="medios" />
+	  <input  id="boton2" type="submit" value="Programación" name="programacion" />     
+	  <input  id="boton2" type="submit" value="Consulta" name="programacion" />     
+	</form>
+      </div>
+
+      <div id="seleccion">
+	<img id="image" src="flecha.jpg" height="40" width="40" alt="select" />
+      </div>
+
+      <div id="workspace">
+ 	<object data="http://www.verticetv.mx" width="800" height="600">
+	</object>
+      </div>
+      
+      <form method="post" action="bring.php" >
+	<!--textarea id="header">CONSULTAR CONFIGURACIÓN POR PLAYER:</textarea-->
+	<input id="boton3" type="submit" value="Consultar" name="bring" />
+      </form>
+    </div>
+  </body>
+</html>
+
+<!--html upload>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  <input name="archivo" type="file" size="35" />
+  <input name="enviar" type="submit" value="Upload File" />
+  <input name="action" type="hidden" value="upload" />     
+</form>
+</html upload-->
